@@ -1,24 +1,28 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 const Navbar = () => {
 
-    // const pathName = usePathname()
+    const pathName = usePathname()
     // console.log( 'pathname in the navbar', pathName)
 
-    // className={pathName === '/' ? 'text-blue-400': ''}
-    // className={pathName === '/about' ? 'text-blue-400': ''}
-    // className={pathName === '/dashboard' ? 'text-blue-400': ''}
+
+
+
+
+
+
 
     const links = <>
-        <li><Link  href="/">Home</Link></li>
-        <li><Link  href="/about">About</Link></li>
-        <li><Link href="/contact">Contact</Link></li>
-        <li><Link href="/blogs">Blogs</Link></li>
-        <li><Link   href="/dashboard">Dashboard</Link></li>
-        <li><Link href="/users">Users</Link></li>
-        
+        <li><Link className={pathName === '/' ? 'text-blue-400' : ''} href="/">Home</Link></li>
+        <li><Link className={pathName === '/about' ? 'text-blue-400' : ''} href="/about">About</Link></li>
+        <li><Link className={pathName === '/contact' ? 'text-blue-400' : ''} href="/contact">Contact</Link></li>
+        <li><Link className={pathName === '/blogs' ? 'text-blue-400' : ''} href="/blogs">Blogs</Link></li>
+        <li><Link className={pathName === '/dashboard' ? 'text-blue-400' : ''} href="/dashboard">Dashboard</Link></li>
+        <li><Link className={pathName === '/users' ? 'text-blue-400' : ''} href="/users">Users</Link></li>
+
     </>
 
     return (
