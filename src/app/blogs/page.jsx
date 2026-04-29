@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-// import { Roboto, Poppins } from 'next/font/google'
+import { Roboto, Poppins } from 'next/font/google'
 
-// const roboto = Roboto({
-//   weight: '400',
-//   subsets: ['latin'],
-// })
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
 
-// const poppins = Poppins({
-//   weight: [ '400', '700' ],
-//   subsets: ['latin'],
-// })
+const poppins = Poppins({
+  weight: [ '400', '700' ],
+  subsets: ['latin'],
+})
 
 
 const BlogsPage = () => {
@@ -49,10 +49,9 @@ const BlogsPage = () => {
             content: "Node.js allows you to run JavaScript on the server side, making it a great choice for building scalable backend applications."
         }
     ];
-// className={poppins.className}
 
     return (
-        <div >
+        <div div className={poppins.className} >
             <h2 className="text-3xl font-bold mb-4">Blogs</h2>
 
             {blogs.map(blog => <div key={blog.id}>
